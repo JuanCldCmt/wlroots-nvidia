@@ -176,7 +176,7 @@ static bool gles2_bind_buffer(struct wlr_renderer *wlr_renderer,
 		assert(wlr_egl_is_current(renderer->egl));
 
 		push_gles2_debug(renderer);
-		glFlush();
+		glFinish();
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		pop_gles2_debug(renderer);
 
